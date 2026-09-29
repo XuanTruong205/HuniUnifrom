@@ -169,7 +169,7 @@ export const FounderAndCommitmentSection: React.FC = () => {
               <div className="absolute -left-6 sm:-left-8 -top-6 -bottom-6 w-[85%] rounded-[44px] bg-[#EFE8DD] -z-10 pointer-events-none" />
 
               {/* Main Photo Container */}
-              <div className="relative rounded-[28px] sm:rounded-[32px] overflow-hidden bg-white shadow-[0_12px_36px_rgba(40,32,24,0.08)] border border-white">
+              <div className="relative rounded-[28px] sm:rounded-[32px] overflow-hidden bg-[#FAF7F2] shadow-[0_12px_36px_rgba(40,32,24,0.08)] border border-[#ECE3D5]">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activePhotoTab}
@@ -267,7 +267,7 @@ export const FounderAndCommitmentSection: React.FC = () => {
                   return (
                     <div
                       key={item.id}
-                      className="p-4 sm:p-4.5 rounded-[18px] bg-white/70 hover:bg-white border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:shadow-md transition-all duration-300 flex items-start gap-3.5 group"
+                      className="p-4 sm:p-4.5 rounded-[18px] bg-[#FAF7F2] hover:bg-[#F5EFE6] border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(40,32,24,0.03)] hover:shadow-md transition-all duration-300 flex items-start gap-3.5 group"
                     >
                       {/* Icon with warm circular backdrop */}
                       <div className="w-10 h-10 rounded-full bg-[#F3EBE0] group-hover:bg-[#EFE4D6] text-[#8F6E43] flex items-center justify-center shrink-0 transition-colors">
@@ -293,10 +293,10 @@ export const FounderAndCommitmentSection: React.FC = () => {
             <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <a
                 href="#quotation-download"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-full bg-[#2B2620] hover:bg-[#1A1713] text-white text-[13.5px] font-medium shadow-sm transition-all duration-200 hover:scale-[1.02] self-start sm:self-auto cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 rounded-full bg-[#2B2620] hover:bg-[#1A1713] text-white text-[13.5px] font-medium shadow-sm transition-all duration-200 hover:scale-[1.02] w-fit shrink-0 cursor-pointer whitespace-nowrap"
               >
-                <span>Nhận tư vấn may mẫu miễn phí</span>
-                <ArrowRight className="w-4 h-4 text-[#D8B685]" />
+                <span className="whitespace-nowrap">Nhận tư vấn may mẫu miễn&nbsp;phí</span>
+                <ArrowRight className="w-4 h-4 text-[#D8B685] shrink-0" />
               </a>
 
               {/* Right Footnote Stamp */}

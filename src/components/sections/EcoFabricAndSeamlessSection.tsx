@@ -112,7 +112,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                 className="space-y-8"
               >
                 {/* Hero Box Giới thiệu Vải Xanh */}
-                <div className="p-6 sm:p-8 rounded-[24px] bg-white border border-[#ECE4D8] shadow-[0_6px_24px_rgba(40,32,24,0.04)] flex flex-col lg:flex-row items-center justify-between gap-6">
+                <div className="p-6 sm:p-8 rounded-[24px] bg-[#FAF7F2] border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.04)] flex flex-col lg:flex-row items-center justify-between gap-6">
                   <div className="space-y-2 max-w-3xl">
                     <span className="text-[11px] font-semibold text-[#8F6E43] uppercase tracking-[0.16em] flex items-center gap-1.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#8F6E43]" />
@@ -141,12 +141,12 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                     return (
                       <div
                         key={fiber.id}
-                        className="p-6 rounded-[20px] bg-white/80 hover:bg-white border border-[#ECE4D8] shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+                        className="p-6 rounded-[20px] bg-[#FAF7F2] hover:bg-[#F5EFE6] border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(40,32,24,0.03)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
                       >
                         <div className="space-y-3.5">
                           <div className="flex items-center gap-3.5">
                             {fiber.imageSrc ? (
-                              <div className="w-13 h-13 rounded-xl overflow-hidden bg-[#FAF6F0] border border-[#ECE4D8] shrink-0 p-1 group-hover:scale-105 transition-transform duration-300">
+                              <div className="w-13 h-13 rounded-xl overflow-hidden bg-[#FAF7F2] border border-[#ECE3D5] shrink-0 p-1 group-hover:scale-105 transition-transform duration-300">
                                 <img
                                   src={resolveAsset(fiber.imageSrc)}
                                   alt={fiber.name}
@@ -175,7 +175,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                           </p>
                         </div>
 
-                        <div className="mt-4 pt-3 border-t border-[#ECE4D8] flex items-center justify-between text-[12px] font-medium text-[#1E1C19]">
+                        <div className="mt-4 pt-3 border-t border-[#ECE3D5] flex items-center justify-between text-[12px] font-medium text-[#1E1C19]">
                           <span className="flex items-center gap-1">
                             <Check className="w-3.5 h-3.5 text-[#8F6E43]" />
                             100% Tự nhiên
@@ -188,7 +188,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                 </div>
 
                 {/* 5 Đặc Tính Kiểm Chứng */}
-                <div className="p-6 sm:p-7 rounded-[22px] bg-white border border-[#ECE4D8] shadow-[0_4px_16px_rgba(0,0,0,0.03)] space-y-4">
+                <div className="p-6 sm:p-7 rounded-[22px] bg-[#FAF7F2] border border-[#ECE3D5] shadow-[0_4px_16px_rgba(40,32,24,0.03)] space-y-4">
                   <div className="text-center max-w-xl mx-auto space-y-1">
                     <span className="text-[11px] font-bold text-[#8C8070] tracking-[0.16em] uppercase">
                       Tiêu chuẩn kiểm nghiệm
@@ -202,7 +202,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                     {SUSTAINABLE_FABRICS.properties.map((prop) => (
                       <div
                         key={prop.id}
-                        className="p-4 rounded-xl bg-[#FAF6F0] border border-[#ECE4D8] space-y-1"
+                        className="p-4 rounded-xl bg-[#FAF7F2] border border-[#ECE3D5] space-y-1"
                       >
                         <div className="w-5 h-5 rounded-full bg-[#363029] text-[#D4A373] flex items-center justify-center text-[10px] font-bold">
                           ✓
@@ -279,9 +279,9 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                     {SEAMLESS_TECHNOLOGY.macroPhotoSlots.map((item, idx) => (
                       <div
                         key={idx}
-                        className="p-4 rounded-[20px] bg-white border border-[#ECE4D8] shadow-[0_4px_16px_rgba(0,0,0,0.02)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 space-y-2 group"
+                        className="p-4 rounded-[20px] bg-[#FAF7F2] hover:bg-[#F5EFE6] border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(40,32,24,0.03)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 space-y-2 group"
                       >
-                        <div className="overflow-hidden rounded-xl bg-[#FAF6F0] aspect-square flex items-center justify-center">
+                        <div className="overflow-hidden rounded-xl bg-[#F5EFE6] aspect-square flex items-center justify-center">
                           <ImageSlot
                             slot={item.slot}
                             aspect="square"
@@ -307,7 +307,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.25 }}
-                className="p-7 sm:p-9 rounded-[24px] bg-white border border-[#ECE4D8] shadow-[0_4px_16px_rgba(0,0,0,0.03)] space-y-6"
+                className="p-7 sm:p-9 rounded-[24px] bg-[#FAF7F2] border border-[#ECE3D5] shadow-[0_4px_16px_rgba(40,32,24,0.03)] space-y-6"
               >
                 <div className="space-y-1.5 max-w-3xl">
                   <span className="text-[11px] font-bold text-[#8C8070] tracking-[0.16em] uppercase flex items-center gap-1.5">
@@ -334,7 +334,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                           className={`w-full p-3.5 rounded-xl border text-left transition-all duration-200 flex items-start gap-3 cursor-pointer ${
                             isSelected
                               ? 'border-[#363029] bg-[#F5EFE6] text-[#1E1C19] ring-1 ring-[#363029]'
-                              : 'border-[#ECE4D8] bg-white/70 text-[#6E6559] hover:bg-[#FAF6F0]'
+                              : 'border-[#ECE3D5] bg-[#FAF7F2] text-[#6E6559] hover:bg-[#F5EFE6]'
                           }`}
                         >
                           <div
@@ -359,14 +359,14 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
 
                   {/* Motif Hero Preview */}
                   <div className="lg:col-span-7">
-                    <div className="rounded-[20px] overflow-hidden bg-[#FAF6F0] border border-[#ECE4D8] p-3 shadow-xs">
+                    <div className="rounded-[20px] overflow-hidden bg-[#FAF7F2] border border-[#ECE3D5] p-3 shadow-xs">
                       <ImageSlot
                         slot={selectedMotif.photoSlot}
                         aspect="wide"
                         className="rounded-xl max-h-[340px] object-cover"
                         hideCaption={true}
                       />
-                      <div className="mt-2.5 p-2.5 bg-white rounded-lg border border-[#ECE4D8] flex items-center justify-between text-[12px]">
+                      <div className="mt-2.5 p-2.5 bg-[#FAF7F2] rounded-lg border border-[#ECE3D5] flex items-center justify-between text-[12px]">
                         <span className="font-semibold text-[#1E1C19]">{selectedMotif.name}</span>
                         <span className="text-[#8C8070] font-normal">Độc quyền thiết kế HDC Uniform</span>
                       </div>

@@ -117,7 +117,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
           {/* ========================================================= */}
           {/* LEFT: 3-STEP INTUITIVE B2B CONVERSION FORM (8 COLUMNS)    */}
           {/* ========================================================= */}
-          <div className="lg:col-span-8 bg-white rounded-[28px] p-6 sm:p-9 border border-[#ECE4D8] shadow-[0_6px_24px_rgba(40,32,24,0.03)]">
+          <div className="lg:col-span-8 bg-[#FAF7F2] rounded-[28px] p-6 sm:p-9 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)]">
             {isSubmitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
@@ -165,8 +165,8 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                           onClick={() => setSelectedProductLine(prod.id)}
                           className={`p-3.5 rounded-[16px] border text-left text-[13px] sm:text-[14px] font-medium transition-all flex items-center justify-between gap-3 cursor-pointer ${
                             isSelected
-                              ? 'border-[#2B2620] bg-[#FAF6F0] text-[#1E1C19] ring-1 ring-[#2B2620]'
-                              : 'border-[#ECE4D8] bg-white text-[#6E6559] hover:bg-[#FAF6F0] hover:text-[#1E1C19]'
+                              ? 'border-[#2B2620] bg-[#F5EFE6] text-[#1E1C19] ring-1 ring-[#2B2620]'
+                              : 'border-[#ECE3D5] bg-[#FAF7F2] text-[#6E6559] hover:bg-[#F5EFE6] hover:text-[#1E1C19]'
                           }`}
                         >
                           <div className="flex items-center gap-2.5">
@@ -174,7 +174,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                               className={`w-4 h-4 rounded-full border flex items-center justify-center shrink-0 ${
                                 isSelected
                                   ? 'border-[#2B2620] bg-[#2B2620]'
-                                  : 'border-[#DFD6C8] bg-white'
+                                  : 'border-[#DFD6C8] bg-[#FAF7F2]'
                               }`}
                             >
                               {isSelected && (
@@ -201,7 +201,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                 </div>
 
                 {/* 2. NHÓM 2: LOẠI SẢN PHẨM & SỐ LƯỢNG */}
-                <div className="space-y-4 pt-4 border-t border-[#ECE4D8]">
+                <div className="space-y-4 pt-4 border-t border-[#ECE3D5]">
                   <div className="flex items-center gap-2.5">
                     <span className="w-6 h-6 rounded-full bg-[#2B2620] text-[#D4A373] font-serif font-semibold text-[12px] flex items-center justify-center shrink-0">
                       2
@@ -225,7 +225,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                             className={`p-2.5 rounded-full border text-center text-[12px] font-medium transition-all cursor-pointer ${
                               isSelected
                                 ? 'border-[#2B2620] bg-[#2B2620] text-[#FAF6F0]'
-                                : 'border-[#ECE4D8] bg-white text-[#6E6559] hover:bg-[#FAF6F0]'
+                                : 'border-[#ECE3D5] bg-[#FAF7F2] text-[#6E6559] hover:bg-[#F5EFE6]'
                             }`}
                           >
                             {qty}
@@ -250,15 +250,15 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                             onClick={() => toggleFabric(fabric.name)}
                             className={`p-2.5 rounded-[14px] border text-left text-[12px] transition-all flex items-start gap-2 cursor-pointer ${
                               isChecked
-                                ? 'border-[#D4A373] bg-[#FAF6F0] text-[#1E1C19] font-medium shadow-2xs'
-                                : 'border-[#ECE4D8] bg-white text-[#6E6559] hover:bg-[#FAF6F0]'
+                                ? 'border-[#D4A373] bg-[#F5EFE6] text-[#1E1C19] font-medium shadow-2xs'
+                                : 'border-[#ECE3D5] bg-[#FAF7F2] text-[#6E6559] hover:bg-[#F5EFE6]'
                             }`}
                           >
                             <span
                               className={`w-3.5 h-3.5 rounded flex items-center justify-center shrink-0 border mt-0.5 ${
                                 isChecked
                                   ? 'bg-[#2B2620] border-[#2B2620] text-[#D4A373]'
-                                  : 'bg-white border-[#DFD6C8]'
+                                  : 'bg-[#FAF7F2] border-[#DFD6C8]'
                               }`}
                             >
                               {isChecked && <Check className="w-2.5 h-2.5 stroke-[3]" />}
@@ -277,7 +277,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                 </div>
 
                 {/* 3. NHÓM 3: THÔNG TIN LIÊN HỆ */}
-                <div className="space-y-4 pt-4 border-t border-[#ECE4D8]">
+                <div className="space-y-4 pt-4 border-t border-[#ECE3D5]">
                   <div className="flex items-center gap-2.5">
                     <span className="w-6 h-6 rounded-full bg-[#2B2620] text-[#D4A373] font-serif font-semibold text-[12px] flex items-center justify-center shrink-0">
                       3

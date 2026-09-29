@@ -60,7 +60,7 @@ export const FullCatalogShowcase: React.FC = () => {
                 className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-[13px] sm:text-[14px] font-medium transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'bg-[#363029] text-white shadow-sm'
-                    : 'text-[#6B6154] hover:text-[#1E1C19] hover:bg-white/60'
+                    : 'text-[#6B6154] hover:text-[#1E1C19] hover:bg-[#FAF7F2]'
                 }`}
               >
                 <Icon className={`w-4 h-4 ${isActive ? 'text-[#D4A373]' : 'text-[#8C8070]'}`} />
@@ -82,7 +82,7 @@ export const FullCatalogShowcase: React.FC = () => {
               className="space-y-8"
             >
               {/* Category Description Banner */}
-              <div className="p-5 sm:p-6 rounded-[24px] bg-white border border-[#ECE4D8] flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-[0_4px_16px_rgba(40,32,24,0.03)]">
+              <div className="p-5 sm:p-6 rounded-[24px] bg-[#FAF7F2] border border-[#ECE3D5] flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-[0_4px_16px_rgba(40,32,24,0.03)]">
                 <div className="space-y-1">
                   <span className="text-[11px] font-bold text-[#8C8070] tracking-[0.16em] uppercase flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#8F6E43]" />
@@ -145,12 +145,12 @@ export const FullCatalogShowcase: React.FC = () => {
                 {activeCategory.items.map((item) => (
                   <div
                     key={item.id}
-                    className="group relative rounded-[22px] bg-white border border-[#ECE4D8] shadow-[0_4px_16px_rgba(40,32,24,0.02)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden h-full"
+                    className="group relative rounded-[22px] bg-[#FAF7F2] border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(40,32,24,0.03)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden h-full"
                   >
                     <div className="space-y-3">
                       {/* Item Image Slot: aspect 4:5 */}
-                      <div className="p-3 bg-[#FAF6F0] relative overflow-hidden">
-                        <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-white border border-[#ECE4D8] flex items-center justify-center">
+                      <div className="p-3 bg-[#F4EDE2]/50 relative overflow-hidden">
+                        <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-[#FAF7F2] border border-[#ECE3D5] flex items-center justify-center">
                           <ImageSlot
                             slot={item.photoSlot}
                             aspect="auto"
@@ -181,7 +181,7 @@ export const FullCatalogShowcase: React.FC = () => {
                               {item.badge}
                             </span>
                           ) : (
-                            <span className="text-[10px] font-normal px-2.5 py-0.5 rounded-full bg-[#FAF6F0] text-[#7A6E5F] border border-[#ECE4D8]">
+                            <span className="text-[10px] font-normal px-2.5 py-0.5 rounded-full bg-[#F5EFE6] text-[#7A6E5F] border border-[#ECE3D5]">
                               {item.categoryName || 'Đồng phục'}
                             </span>
                           )}
@@ -210,7 +210,7 @@ export const FullCatalogShowcase: React.FC = () => {
                     </div>
 
                     {/* Card Action Footer */}
-                    <div className="px-5 py-3 mt-1 border-t border-[#ECE4D8] flex items-center justify-between text-[12px] bg-[#FAF6F0]/60">
+                    <div className="px-5 py-3 mt-1 border-t border-[#ECE3D5] flex items-center justify-between text-[12px] bg-[#F5EFE6]/70">
                       <span className="font-normal text-[#8C8070] text-[11px]">
                         HDC Uniform Standard
                       </span>

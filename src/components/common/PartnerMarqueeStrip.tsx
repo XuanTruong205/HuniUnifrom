@@ -64,7 +64,7 @@ export const PartnerMarqueeStrip: React.FC = () => {
             return (
               <div
                 key={`${item.id}-${idx}`}
-                className="group relative h-16 px-4.5 shrink-0 flex items-center gap-3.5 rounded-xl bg-white/80 border border-[#ECE4D8] shadow-2xs hover:shadow-xs hover:border-[#DECBB7] hover:bg-white transition-all duration-200 cursor-pointer overflow-hidden"
+                className="group relative h-16 px-4.5 shrink-0 flex items-center gap-3.5 rounded-xl bg-[#FAF7F2] border border-[#ECE3D5] shadow-2xs hover:shadow-xs hover:border-[#DECBB7] hover:bg-[#F5EFE6] transition-all duration-200 cursor-pointer overflow-hidden"
                 title={`${item.name} - ${item.category}`}
               >
                 {/* Organization Icon / Logo Badge */}

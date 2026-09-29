@@ -75,7 +75,7 @@ export const FloatingContactBar: React.FC = () => {
               Lên đầu trang
             </span>
 
-            <div className="w-10 h-10 rounded-full bg-[#FAF6F0] text-[#1A1714] border border-[#ECE4D8] flex items-center justify-center shadow-md hover:bg-white active:scale-95 transition-all">
+            <div className="w-10 h-10 rounded-full bg-[#FAF7F2] text-[#1A1714] border border-[#ECE3D5] flex items-center justify-center shadow-md hover:bg-[#F5EFE6] active:scale-95 transition-all">
               <ArrowUp className="w-4 h-4" />
             </div>
           </motion.button>
