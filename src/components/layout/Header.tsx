@@ -27,8 +27,8 @@ export const Header: React.FC = () => {
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#08182F]/95 backdrop-blur-md shadow-[0_4px_20px_rgba(16,24,40,0.06)] border-b border-white/10'
-          : 'bg-[#08182F] border-b border-white/10'
+          ? 'bg-[#1A1714]/95 backdrop-blur-md shadow-[0_4px_24px_rgba(26,23,20,0.12)] border-b border-[#352E26]'
+          : 'bg-[#1A1714] border-b border-[#352E26]'
       }`}
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-[74px] sm:h-[76px] flex items-center justify-between gap-4">
@@ -42,7 +42,7 @@ export const Header: React.FC = () => {
         </a>
 
         {/* Navigation Menu Links (Desktop) - 14-15px, font-weight 500, spacing 26-32px */}
-        <nav className="hidden lg:flex items-center justify-center gap-7 xl:gap-8 text-[14px] xl:text-[15px] font-medium text-slate-200">
+        <nav className="hidden lg:flex items-center justify-center gap-7 xl:gap-8 text-[14px] xl:text-[15px] font-medium text-[#D8CFBF]">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -54,22 +54,22 @@ export const Header: React.FC = () => {
           ))}
         </nav>
 
-        {/* Right side: Duy nhất 1 CTA nổi bật "Nhận báo giá" (Gold #E7B936) + Hamburger mobile */}
+        {/* Right side: Duy nhất 1 CTA nổi bật "Nhận báo giá" (Champagne Gold #D4A373) + Hotline */}
         <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-          {/* Hotline text nhỏ gọn thanh lịch trên màn hình vừa và lớn */}
+          {/* Hotline text nhỏ gọn thanh lịch */}
           <a
             href={COMPANY_INFO.hotlineTel}
-            className="hidden xl:inline-flex items-center gap-2 text-[13px] font-medium text-slate-300 hover:text-white transition-colors"
+            className="hidden xl:inline-flex items-center gap-2 text-[13px] font-medium text-[#C8BFB0] hover:text-white transition-colors"
             title={`Hotline: ${COMPANY_INFO.hotline}`}
           >
-            <PhoneCall className="w-3.5 h-3.5 text-[#E7B936]" />
+            <PhoneCall className="w-3.5 h-3.5 text-[#D4A373]" />
             <span>{COMPANY_INFO.hotline}</span>
           </a>
 
-          {/* Duy nhất 1 CTA nổi bật: "Nhận báo giá" - Radius 8-10px */}
+          {/* Duy nhất 1 CTA nổi bật: "Nhận báo giá" - Pill Shape */}
           <a
             href="#quotation-download"
-            className="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-[9px] bg-[#E7B936] hover:bg-[#d8a92b] text-[#08182F] text-[13px] sm:text-[14px] font-semibold transition-all duration-200 shadow-sm"
+            className="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-[#D4A373] hover:bg-[#C29363] text-[#1A1714] text-[13px] sm:text-[14px] font-semibold transition-all duration-200 shadow-sm hover:scale-[1.02]"
           >
             Nhận báo giá
           </a>
@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
 
       {/* Mobile Navigation Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#08182F] border-b border-white/10 px-4 pt-3 pb-5 space-y-3">
+        <div className="lg:hidden bg-[#1A1714] border-b border-[#352E26] px-4 pt-3 pb-5 space-y-3">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
@@ -100,14 +100,14 @@ export const Header: React.FC = () => {
               </a>
             ))}
           </nav>
-          <div className="pt-2 border-t border-white/10 flex items-center justify-between px-3 text-xs text-slate-300">
+          <div className="pt-2 border-t border-[#352E26] flex items-center justify-between px-3 text-xs text-slate-300">
             <span className="flex items-center gap-1.5">
-              <PhoneCall className="w-3.5 h-3.5 text-[#E7B936]" />
+              <PhoneCall className="w-3.5 h-3.5 text-[#D4A373]" />
               Hotline: {COMPANY_INFO.hotline}
             </span>
             <a
               href={COMPANY_INFO.hotlineTel}
-              className="text-[#E7B936] font-medium hover:underline"
+              className="text-[#D4A373] font-medium hover:underline"
             >
               Gọi ngay
             </a>

@@ -32,12 +32,12 @@ export const FloatingContactBar: React.FC = () => {
         title={`Gọi Hotline: ${COMPANY_INFO.hotline}`}
       >
         {/* Tooltip Badge on hover */}
-        <span className="hidden sm:inline-block absolute right-14 whitespace-nowrap bg-[#08182F] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <span className="hidden sm:inline-block absolute right-14 whitespace-nowrap bg-[#1A1714] text-[#FAF6F0] text-xs font-medium px-3.5 py-1.5 rounded-full shadow-md border border-[#352E26] opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
           Hotline: {COMPANY_INFO.hotline}
         </span>
 
-        <div className="w-12 h-12 rounded-xl bg-[#E7B936] text-[#08182F] flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-transform duration-200">
-          <PhoneCall className="w-5 h-5 text-[#08182F]" />
+        <div className="w-12 h-12 rounded-full bg-[#D4A373] hover:bg-[#C29363] text-[#1A1714] flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform duration-200">
+          <PhoneCall className="w-5 h-5 text-[#1A1714]" />
         </div>
       </a>
 
@@ -49,11 +49,11 @@ export const FloatingContactBar: React.FC = () => {
         className="group relative flex items-center justify-end"
         title={`Chat Zalo: ${COMPANY_INFO.hotline}`}
       >
-        <span className="hidden sm:inline-block absolute right-14 whitespace-nowrap bg-[#0068ff] text-white text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <span className="hidden sm:inline-block absolute right-14 whitespace-nowrap bg-[#1A1714] text-[#FAF6F0] text-xs font-medium px-3.5 py-1.5 rounded-full shadow-md border border-[#352E26] opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
           Chat Zalo: {COMPANY_INFO.hotline}
         </span>
 
-        <div className="w-12 h-12 rounded-xl bg-[#0068ff] text-white flex items-center justify-center shadow-md hover:scale-105 active:scale-95 transition-transform duration-200 font-bold text-xs">
+        <div className="w-12 h-12 rounded-full bg-[#0068ff] text-white flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-transform duration-200 font-bold text-xs">
           Zalo
         </div>
       </a>
@@ -71,11 +71,11 @@ export const FloatingContactBar: React.FC = () => {
             title="Cuộn lên đầu trang"
             aria-label="Cuộn lên đầu trang"
           >
-            <span className="hidden sm:inline-block absolute right-14 whitespace-nowrap bg-slate-800 text-white text-xs font-semibold px-2.5 py-1 rounded-md shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+            <span className="hidden sm:inline-block absolute right-14 whitespace-nowrap bg-[#1A1714] text-[#FAF6F0] text-xs font-medium px-3 py-1 rounded-full shadow-md border border-[#352E26] opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
               Lên đầu trang
             </span>
 
-            <div className="w-10 h-10 rounded-xl bg-white text-[#08182F] border border-slate-200 flex items-center justify-center shadow-sm hover:bg-slate-50 active:scale-95 transition-all">
+            <div className="w-10 h-10 rounded-full bg-[#FAF6F0] text-[#1A1714] border border-[#ECE4D8] flex items-center justify-center shadow-md hover:bg-white active:scale-95 transition-all">
               <ArrowUp className="w-4 h-4" />
             </div>
           </motion.button>

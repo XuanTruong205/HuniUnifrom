@@ -12,11 +12,11 @@ import { FloatingContactBar } from './components/common/FloatingContactBar';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#F7F8FC] text-[#08182F] font-sans antialiased selection:bg-amber-100 selection:text-[#08182F]">
+    <div className="min-h-screen bg-[#FAF6F0] text-[#1E1C19] font-sans antialiased selection:bg-[#EAE0D3] selection:text-[#1E1C19]">
       {/* 1. Header (Sticky, 76px, Navy/Blur, CTA Nhận báo giá) */}
       <Header />
 
-      {/* 2. Hero Section (Gradient từ #08182F, H1 56px, CTA Gold #E7B936, Taller USP) */}
+      {/* 2. Hero Section (Luxury Espresso #1A1714, H1 Serif, CTA Champagne Gold #D4A373, Trust Pillars) */}
       <HeroSection />
 
       {/* 2.5. Partner Marquee Scroller */}

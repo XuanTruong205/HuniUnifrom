@@ -6,15 +6,17 @@
   --font-display: 'Outfit', sans-serif;
   --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
 
-  /* HDC Uniform Corporate Fashion Theme */
-  --color-brand-navy: #08182F;
-  --color-brand-gold: #E7B936;
-  --color-brand-violet: #7477E8;
-  --color-brand-bg: #F7F8FC;
-  --color-brand-primary-text: #101828;
-  --color-brand-secondary-text: #667085;
-  --color-brand-border: #E4E7EC;
-  --color-brand-input-border: #D0D5DD;
+  /* Editorial Luxury Fashion Palette */
+  --color-brand-espresso: #1E1B18;
+  --color-brand-dark: #24201D;
+  --color-brand-gold: #D4A373;
+  --color-brand-bronze: #8F6E43;
+  --color-brand-warm-bg: #FAF6F0;
+  --color-brand-cream: #F5EFE6;
+  --color-brand-primary-text: #1E1C19;
+  --color-brand-secondary-text: #6E6559;
+  --color-brand-border: #ECE4D8;
+  --color-brand-input-border: #DCD2C3;
 }
 
 html {
@@ -22,9 +24,9 @@ html {
 }
 
 body {
-  background-color: #F7F8FC;
+  background-color: #FAF6F0;
   font-family: var(--font-sans);
-  color: #101828;
+  color: #1E1C19;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -42,13 +44,13 @@ body {
   font-family: var(--font-serif);
 }
 
-/* Subtle Corporate Shadows */
+/* Subtle Editorial Shadows */
 .shadow-corporate {
-  box-shadow: 0 4px 20px rgba(16, 24, 40, 0.06);
+  box-shadow: 0 4px 20px rgba(40, 32, 24, 0.05);
 }
 
 .shadow-corporate-hover {
-  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.10);
+  box-shadow: 0 10px 30px rgba(40, 32, 24, 0.08);
 }
 
 @keyframes marquee {
@@ -63,17 +65,9 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 28s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
-.animate-marquee:hover,
-.animate-marquee:focus-within {
+.animate-marquee:hover {
   animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none !important;
-    transform: none !important;
-  }
 }

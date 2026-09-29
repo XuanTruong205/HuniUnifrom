@@ -29,26 +29,27 @@ export const FullCatalogShowcase: React.FC = () => {
     PRODUCTS_CATALOG.find((cat) => cat.id === activeTabId) || PRODUCTS_CATALOG[0];
 
   return (
-    <section id="catalog-showcase" className="py-20 sm:py-24 lg:py-28 bg-[#F7F8FC] relative overflow-hidden">
+    <section id="catalog-showcase" className="py-20 sm:py-24 lg:py-28 bg-[#F5EFE6] relative overflow-hidden text-[#1E1C19]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header: Spacing Heading -> Description 14-18px */}
-        <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#E4E7EC] text-[12px] sm:text-[13px] font-medium text-[#101828]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#E7B936]" />
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE8DD] border border-[#DFD6C8] text-[12px] font-medium text-[#574F44]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#7D6B56]" />
             <span>Bộ sưu tập sản phẩm chủ lực</span>
           </div>
 
-          <h2 className="mt-3.5 sm:mt-4 text-[30px] sm:text-[36px] lg:text-[38px] font-semibold text-[#08182F] tracking-tight leading-[1.2]">
-            Bộ Sưu Tập Sản Phẩm Đồng Phục
+          <h2 className="font-serif text-[32px] sm:text-[40px] lg:text-[46px] font-normal sm:font-medium text-[#1E1C19] tracking-tight leading-[1.18]">
+            Bộ Sưu Tập Sản Phẩm <br className="hidden sm:block" />
+            <span className="italic">Đồng Phục Đẳng Cấp</span>
           </h2>
 
-          <p className="mt-3.5 sm:mt-4 text-[15px] sm:text-[16px] leading-[1.6] text-[#667085] max-w-2xl mx-auto font-normal">
+          <p className="text-[14px] sm:text-[15px] leading-[1.65] text-[#6E6559] max-w-2xl mx-auto font-normal">
             Sơ mi Seamless không đường may, áo Polo Anti-UV thoáng khí, đồng phục học sinh cao cấp và phụ kiện doanh nghiệp tinh tế.
           </p>
         </div>
 
-        {/* 4 Interactive Category Tabs - Tối giản, radius 8px, padding dễ bấm */}
-        <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-slate-200/50 rounded-xl max-w-2xl mx-auto border border-[#E4E7EC]">
+        {/* 4 Interactive Category Tabs */}
+        <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#EFE8DD]/70 rounded-full max-w-3xl mx-auto border border-[#DFD6C8]">
           {PRODUCTS_CATALOG.map((cat, idx) => {
             const Icon = TAB_ICONS[idx] || Shirt;
             const isActive = cat.id === activeTabId;
@@ -56,13 +57,13 @@ export const FullCatalogShowcase: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => setActiveTabId(cat.id)}
-                className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-lg text-[13px] sm:text-[14px] font-medium transition-all duration-200 ${
+                className={`flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-full text-[13px] sm:text-[14px] font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-[#08182F] text-white shadow-2xs'
-                    : 'text-[#667085] hover:text-[#08182F] hover:bg-white'
+                    ? 'bg-[#363029] text-white shadow-sm'
+                    : 'text-[#6B6154] hover:text-[#1E1C19] hover:bg-white/60'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#E7B936]' : 'text-slate-400'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-[#D4A373]' : 'text-[#8C8070]'}`} />
                 <span>{cat.categoryTitle}</span>
               </button>
             );
@@ -81,33 +82,33 @@ export const FullCatalogShowcase: React.FC = () => {
               className="space-y-8"
             >
               {/* Category Description Banner */}
-              <div className="p-5 sm:p-6 rounded-[14px] bg-white border border-[#E4E7EC] flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-[0_4px_20px_rgba(16,24,40,0.03)]">
+              <div className="p-5 sm:p-6 rounded-[24px] bg-white border border-[#ECE4D8] flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-[0_4px_16px_rgba(40,32,24,0.03)]">
                 <div className="space-y-1">
-                  <span className="text-[11px] font-semibold text-[#E7B936] uppercase tracking-wider flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#E7B936]" />
+                  <span className="text-[11px] font-bold text-[#8C8070] tracking-[0.16em] uppercase flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#8F6E43]" />
                     Danh mục đang xem
                   </span>
-                  <h3 className="text-[18px] sm:text-[20px] font-semibold text-[#101828]">
+                  <h3 className="font-serif text-[19px] sm:text-[21px] font-medium text-[#1E1C19]">
                     {activeCategory.categoryTitle}
                   </h3>
-                  <p className="text-[13px] sm:text-[14px] text-[#667085] max-w-3xl leading-relaxed font-normal">
+                  <p className="text-[13px] sm:text-[14px] text-[#6E6559] max-w-3xl leading-relaxed font-normal">
                     {activeCategory.description}
                   </p>
                 </div>
                 <a
                   href="#quotation-download"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#08182F] hover:bg-[#071329] text-white text-[13px] font-medium shrink-0 transition-colors shadow-2xs"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2B2620] hover:bg-[#1A1713] text-white text-[13px] font-medium shrink-0 transition-all shadow-sm hover:scale-[1.02]"
                 >
                   <span>Nhận tư vấn may mẫu</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#E7B936]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D4A373]" />
                 </a>
               </div>
 
               {/* Highlight Banner (Polo Anti-UV nếu có) */}
               {activeCategory.highlightBanner && (
-                <div className="p-6 sm:p-8 rounded-[14px] bg-[#08182F] text-white flex flex-col lg:flex-row items-center gap-8 shadow-sm border border-white/10">
+                <div className="p-6 sm:p-8 rounded-[24px] bg-[#231F1C] text-white flex flex-col lg:flex-row items-center gap-8 shadow-md border border-[#3A332B]">
                   {activeCategory.highlightBanner.slot && (
-                    <div className="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-xs border border-white/10">
+                    <div className="w-full lg:w-1/2 rounded-[20px] overflow-hidden shadow-xs border border-white/10">
                       <ImageSlot
                         slot={activeCategory.highlightBanner.slot}
                         aspect="video"
@@ -117,20 +118,20 @@ export const FullCatalogShowcase: React.FC = () => {
                     </div>
                   )}
                   <div className="w-full lg:w-1/2 space-y-3.5">
-                    <span className="text-[12px] font-medium text-[#E7B936] uppercase tracking-wider flex items-center gap-1.5">
-                      <Sparkles className="w-4 h-4 text-[#E7B936]" />
+                    <span className="text-[11px] font-medium text-[#D4A373] uppercase tracking-wider flex items-center gap-1.5">
+                      <Sparkles className="w-4 h-4 text-[#D4A373]" />
                       Trang 6 Catalogue HDC Uniform
                     </span>
-                    <h4 className="text-[22px] sm:text-[24px] font-semibold leading-tight text-white">
+                    <h4 className="font-serif text-[22px] sm:text-[25px] font-medium leading-tight text-white">
                       {activeCategory.highlightBanner.title}
                     </h4>
-                    <p className="text-[13px] text-slate-300 leading-relaxed italic bg-white/5 p-3.5 rounded-lg border border-white/10 font-normal">
+                    <p className="text-[13px] text-[#DDD3C4] leading-relaxed italic bg-white/5 p-3.5 rounded-xl border border-white/10 font-normal">
                       "{activeCategory.highlightBanner.subText}"
                     </p>
                     <div className="space-y-2 pt-1">
                       {activeCategory.highlightBanner.bulletPoints.map((bp, i) => (
-                        <div key={i} className="flex items-center gap-2 text-[12px] text-slate-200 font-normal">
-                          <CheckCircle className="w-4 h-4 text-[#E7B936] shrink-0" />
+                        <div key={i} className="flex items-center gap-2 text-[12px] text-[#E8E0D5] font-normal">
+                          <CheckCircle className="w-4 h-4 text-[#D4A373] shrink-0" />
                           <span>{bp}</span>
                         </div>
                       ))}
@@ -139,56 +140,56 @@ export const FullCatalogShowcase: React.FC = () => {
                 </div>
               )}
 
-              {/* Main Products Grid - Ảnh 70–75% Card, aspect 4:5, hover translateY -4px, scale 1.04, hiện "Xem chi tiết" */}
+              {/* Main Products Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {activeCategory.items.map((item) => (
                   <div
                     key={item.id}
-                    className="group relative rounded-[14px] bg-white border border-[#E4E7EC] shadow-[0_4px_20px_rgba(16,24,40,0.04)] hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(16,24,40,0.08)] transition-all duration-300 flex flex-col justify-between overflow-hidden h-full"
+                    className="group relative rounded-[22px] bg-white border border-[#ECE4D8] shadow-[0_4px_16px_rgba(40,32,24,0.02)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden h-full"
                   >
                     <div className="space-y-3">
-                      {/* Item Image Slot: 70–75% diện tích card, aspect 4:5 */}
-                      <div className="p-3 bg-[#F7F8FC] relative overflow-hidden">
-                        <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden bg-white border border-[#E4E7EC] flex items-center justify-center">
+                      {/* Item Image Slot: aspect 4:5 */}
+                      <div className="p-3 bg-[#FAF6F0] relative overflow-hidden">
+                        <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-white border border-[#ECE4D8] flex items-center justify-center">
                           <ImageSlot
                             slot={item.photoSlot}
                             aspect="portrait"
                             fit="contain"
                             objectPosition="object-center"
-                            className="w-full h-full object-contain p-2 rounded-lg transition-transform duration-300 group-hover:scale-[1.04]"
+                            className="w-full h-full object-contain p-2 rounded-xl transition-transform duration-300 group-hover:scale-[1.04]"
                             hideCaption={true}
                           />
 
                           {/* Hover Overlay: Hiện CTA "Xem chi tiết" */}
-                          <div className="absolute inset-0 bg-[#08182F]/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                          <div className="absolute inset-0 bg-[#231F1C]/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
                             <a
                               href="#quotation-download"
-                              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#E7B936] hover:bg-[#d8a92b] text-[#08182F] font-semibold text-[13px] shadow-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
+                              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4A373] hover:bg-[#C29363] text-[#1A1714] font-semibold text-[13px] shadow-sm transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
                             >
-                              <Eye className="w-3.5 h-3.5 text-[#08182F]" />
+                              <Eye className="w-3.5 h-3.5 text-[#1A1714]" />
                               <span>Xem chi tiết</span>
                             </a>
                           </div>
                         </div>
                       </div>
 
-                      {/* Content Details: Tên sản phẩm nổi bật hơn mô tả */}
+                      {/* Content Details */}
                       <div className="px-5 space-y-1.5 pb-2">
                         <div className="flex items-center justify-between gap-2">
                           {item.badge ? (
-                            <span className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-[#08182F] text-white">
+                            <span className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-[#363029] text-[#EAE0D3]">
                               {item.badge}
                             </span>
                           ) : (
-                            <span className="text-[10px] font-normal px-2 py-0.5 rounded-md bg-slate-100 text-[#667085]">
+                            <span className="text-[10px] font-normal px-2.5 py-0.5 rounded-full bg-[#FAF6F0] text-[#7A6E5F] border border-[#ECE4D8]">
                               {item.categoryName || 'Đồng phục'}
                             </span>
                           )}
                           {item.colorSwatch && (
-                            <div className="flex items-center gap-1.5 text-[11px] text-[#667085]">
+                            <div className="flex items-center gap-1.5 text-[11px] text-[#7A7164]">
                               <span className="text-[10px]">Màu:</span>
                               <span
-                                className="w-3 h-3 rounded-full border border-slate-300 inline-block"
+                                className="w-3.5 h-3.5 rounded-full border border-slate-300 inline-block"
                                 style={{ backgroundColor: item.colorSwatch }}
                                 title={`Màu sắc: ${item.colorSwatch}`}
                               />
@@ -196,12 +197,12 @@ export const FullCatalogShowcase: React.FC = () => {
                           )}
                         </div>
 
-                        <h4 className="font-semibold text-[16px] sm:text-[17px] text-[#101828] leading-snug">
+                        <h4 className="font-serif text-[17px] sm:text-[18px] font-medium text-[#1E1C19] leading-snug">
                           {item.name}
                         </h4>
 
                         {item.description && (
-                          <p className="text-[13px] text-[#667085] line-clamp-2 leading-relaxed font-normal">
+                          <p className="text-[12.5px] text-[#6E6559] line-clamp-2 leading-relaxed font-normal">
                             {item.description}
                           </p>
                         )}
@@ -209,77 +210,21 @@ export const FullCatalogShowcase: React.FC = () => {
                     </div>
 
                     {/* Card Action Footer */}
-                    <div className="px-5 py-3 mt-1 border-t border-[#E4E7EC] flex items-center justify-between text-[12px] bg-[#F7F8FC]/50">
-                      <span className="font-normal text-[#667085] text-[11px]">
+                    <div className="px-5 py-3 mt-1 border-t border-[#ECE4D8] flex items-center justify-between text-[12px] bg-[#FAF6F0]/60">
+                      <span className="font-normal text-[#8C8070] text-[11px]">
                         HDC Uniform Standard
                       </span>
                       <a
                         href="#quotation-download"
-                        className="font-medium text-[#101828] hover:text-[#E7B936] flex items-center gap-1 transition-colors"
+                        className="font-medium text-[#1E1C19] hover:text-[#8F6E43] flex items-center gap-1 transition-colors"
                       >
                         <span>Xem chi tiết</span>
-                        <ArrowRight className="w-3.5 h-3.5 text-[#E7B936] group-hover:translate-x-0.5 transition-transform" />
+                        <ArrowRight className="w-3 h-3 text-[#D4A373]" />
                       </a>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {/* Extra Sub-Group (IHDC Kids) */}
-              {activeCategory.extraSubGroup && (
-                <div className="mt-10 p-6 sm:p-7 rounded-[14px] bg-white border border-[#E4E7EC] shadow-[0_4px_20px_rgba(16,24,40,0.03)] space-y-5">
-                  <div className="space-y-1">
-                    <span className="text-[11px] font-semibold text-[#E7B936] uppercase tracking-wider flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#E7B936]" />
-                      Best Seller Học Sinh
-                    </span>
-                    <h4 className="text-[18px] sm:text-[20px] font-semibold text-[#101828]">
-                      {activeCategory.extraSubGroup.title}
-                    </h4>
-                    {activeCategory.extraSubGroup.description && (
-                      <p className="text-[13px] text-[#667085] leading-relaxed italic bg-[#F7F8FC] p-3 rounded-lg border border-[#E4E7EC] max-w-3xl font-normal">
-                        "{activeCategory.extraSubGroup.description}"
-                      </p>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    {activeCategory.extraSubGroup.items.map((subItem) => (
-                      <div
-                        key={subItem.id}
-                        className="bg-white rounded-xl p-3 border border-[#E4E7EC] shadow-2xs hover:shadow-xs hover:-translate-y-1 transition-all duration-300 space-y-2.5 group"
-                      >
-                        <div className="overflow-hidden rounded-lg bg-slate-50 aspect-[4/5] flex items-center justify-center p-2">
-                          <ImageSlot
-                            slot={subItem.photoSlot}
-                            aspect="portrait"
-                            fit="contain"
-                            objectPosition="object-center"
-                            className="w-full h-full object-contain rounded-lg group-hover:scale-[1.04] transition-transform duration-300"
-                            hideCaption={true}
-                          />
-                        </div>
-                        <div className="flex items-center justify-between pt-1">
-                          <span className="font-semibold text-[13px] text-[#101828]">
-                            {subItem.name}
-                          </span>
-                          {subItem.colorSwatch && (
-                            <span
-                              className="w-3 h-3 rounded-full border border-slate-300 shrink-0"
-                              style={{ backgroundColor: subItem.colorSwatch }}
-                            />
-                          )}
-                        </div>
-                        {subItem.description && (
-                          <p className="text-[12px] text-[#667085] leading-snug line-clamp-2 font-normal">
-                            {subItem.description}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </motion.div>
           </AnimatePresence>
         </div>
