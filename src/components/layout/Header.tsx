@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { COMPANY_INFO } from '../../data/huni-master-data';
+import { resolveAsset } from '../../utils/asset';
 import { PhoneCall, Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
@@ -34,7 +35,7 @@ export const Header: React.FC = () => {
         {/* Brand Logo - Lớn hơn 10-15% */}
         <a href="#" className="flex items-center shrink-0 py-1" title="HDC Uniform - HUNI">
           <img
-            src={COMPANY_INFO.logoSrc}
+            src={resolveAsset(COMPANY_INFO.logoSrc)}
             alt="HDC Uniform Logo"
             className="h-11 sm:h-12 lg:h-[48px] w-auto object-contain transition-transform duration-200"
           />

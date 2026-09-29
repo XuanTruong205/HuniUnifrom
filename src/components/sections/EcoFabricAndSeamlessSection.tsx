@@ -5,6 +5,7 @@ import {
   SEAMLESS_TECHNOLOGY,
 } from '../../data/huni-master-data';
 import { ImageSlot } from '../ImageSlot';
+import { resolveAsset } from '../../utils/asset';
 import {
   Leaf,
   Cpu,
@@ -133,7 +134,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
                             {fiber.imageSrc ? (
                               <div className="w-13 h-13 rounded-lg overflow-hidden bg-slate-50 border border-slate-100 shrink-0 p-1 group-hover:scale-105 transition-transform duration-300">
                                 <img
-                                  src={fiber.imageSrc}
+                                  src={resolveAsset(fiber.imageSrc)}
                                   alt={fiber.name}
                                   className="w-full h-full object-contain"
                                   loading="lazy"

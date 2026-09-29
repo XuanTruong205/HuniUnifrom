@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMPANY_INFO } from '../../data/huni-master-data';
+import { resolveAsset } from '../../utils/asset';
 import {
   PhoneCall,
   MapPin,
@@ -62,7 +63,7 @@ export const CompleteFooter: React.FC = () => {
           <div className="lg:col-span-5 space-y-5">
             <div className="flex items-center gap-3.5">
               <img
-                src={COMPANY_INFO.logoSrc}
+                src={resolveAsset(COMPANY_INFO.logoSrc)}
                 alt="HDC Uniform Logo"
                 className="h-10 sm:h-12 w-auto object-contain"
               />

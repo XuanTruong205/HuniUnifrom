@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ImageOff, Sparkles } from 'lucide-react';
 import type { ImageSlotData } from '../data/huni-master-data';
+import { resolveAsset } from '../utils/asset';
 
 interface ImageSlotProps {
   slot: ImageSlotData;
@@ -37,7 +38,7 @@ export const ImageSlot: React.FC<ImageSlotProps> = ({
     return (
       <div className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${aspectStyles} ${className}`}>
         <img
-          src={slot.src}
+          src={resolveAsset(slot.src)}
           alt={slot.alt}
           loading="lazy"
           onError={() => setHasError(true)}
