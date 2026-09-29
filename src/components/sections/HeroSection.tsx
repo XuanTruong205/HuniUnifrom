@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { resolveAsset } from '../../utils/asset';
 import {
   Sparkles,
   ArrowRight,
@@ -40,7 +41,7 @@ export const HeroSection: React.FC = () => {
       {/* ========================================================= */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="/images/catalog/page00_obj29_1000x666.jpg"
+          src={resolveAsset('/images/catalog/page00_obj29_1000x666.jpg')}
           alt="HDC Uniform - Thời Trang Đồng Phục Doanh Nghiệp"
           className="w-full h-full object-cover object-[80%_center] md:object-[70%_center] scale-100"
           loading="eager"
