@@ -32,7 +32,13 @@ export const FullCatalogShowcase: React.FC = () => {
     <section id="catalog-showcase" className="py-20 sm:py-24 lg:py-28 bg-[#F5EFE6] relative overflow-hidden text-[#1E1C19]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto space-y-4"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE8DD] border border-[#DFD6C8] text-[12px] font-medium text-[#574F44]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7D6B56]" />
             <span>Bộ sưu tập sản phẩm chủ lực</span>
@@ -46,10 +52,16 @@ export const FullCatalogShowcase: React.FC = () => {
           <p className="text-[14px] sm:text-[15px] leading-[1.65] text-[#6E6559] max-w-2xl mx-auto font-normal">
             Sơ mi Seamless không đường may, áo Polo Anti-UV thoáng khí, đồng phục học sinh cao cấp và phụ kiện doanh nghiệp tinh tế.
           </p>
-        </div>
+        </motion.div>
 
         {/* 4 Interactive Category Tabs */}
-        <div className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#EFE8DD]/70 rounded-full max-w-3xl mx-auto border border-[#DFD6C8]">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mt-10 sm:mt-12 flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#EFE8DD]/70 rounded-full max-w-3xl mx-auto border border-[#DFD6C8]"
+        >
           {PRODUCTS_CATALOG.map((cat, idx) => {
             const Icon = TAB_ICONS[idx] || Shirt;
             const isActive = cat.id === activeTabId;
@@ -68,7 +80,7 @@ export const FullCatalogShowcase: React.FC = () => {
               </button>
             );
           })}
-        </div>
+        </motion.div>
 
         {/* Tab Content Display */}
         <div className="mt-8 sm:mt-10">
@@ -142,9 +154,13 @@ export const FullCatalogShowcase: React.FC = () => {
 
               {/* Main Products Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {activeCategory.items.map((item) => (
-                  <div
+                {activeCategory.items.map((item, idx) => (
+                  <motion.div
                     key={item.id}
+                    initial={{ opacity: 0, y: 25 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: (idx % 3) * 0.08, ease: 'easeOut' }}
                     className="group relative rounded-[22px] bg-[#FAF7F2] border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(40,32,24,0.03)] hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col justify-between overflow-hidden h-full"
                   >
                     <div className="space-y-3">
@@ -222,7 +238,7 @@ export const FullCatalogShowcase: React.FC = () => {
                         <ArrowRight className="w-3 h-3 text-[#D4A373]" />
                       </a>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

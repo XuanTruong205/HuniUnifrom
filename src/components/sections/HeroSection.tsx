@@ -66,24 +66,44 @@ export const HeroSection: React.FC = () => {
       <div className="relative z-10 w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 flex flex-col justify-center min-h-[580px] sm:min-h-[620px] lg:min-h-[660px]">
         <div className="max-w-2xl space-y-5">
           {/* Eyebrow Pill Tag */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[12px] sm:text-[13px] font-medium text-[#EAE0D3]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[12px] sm:text-[13px] font-medium text-[#EAE0D3]"
+          >
             <Sparkles className="w-3.5 h-3.5 text-[#D4A373]" />
             <span className="tracking-wide">Thời trang đồng phục doanh nghiệp cao cấp</span>
-          </div>
+          </motion.div>
 
           {/* Heading with Serif Glamour */}
-          <h1 className="font-serif text-[36px] sm:text-[48px] lg:text-[60px] font-normal sm:font-medium tracking-tight leading-[1.12] text-white">
+          <motion.h1
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="font-serif text-[36px] sm:text-[48px] lg:text-[60px] font-normal sm:font-medium tracking-tight leading-[1.12] text-white"
+          >
             Phong Cách <br />
             <span className="italic font-normal text-[#D4A373]">Tạo Thành Công</span>
-          </h1>
+          </motion.h1>
 
           {/* Description */}
-          <p className="text-[15px] sm:text-[16px] lg:text-[17px] text-[#DDD3C4] leading-[1.65] max-w-[540px] font-normal">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="text-[15px] sm:text-[16px] lg:text-[17px] text-[#DDD3C4] leading-[1.65] max-w-[540px] font-normal"
+          >
             Giải pháp đồng phục doanh nghiệp toàn diện. Tiên phong ứng dụng chất liệu sinh thái tự nhiên, kỹ thuật Seamless không đường may và họa tiết di sản văn hóa bản địa.
-          </p>
+          </motion.p>
 
           {/* CTAs: Luxury Pill Buttons */}
-          <div className="pt-2 flex flex-wrap items-center gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.75, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            className="pt-2 flex flex-wrap items-center gap-4"
+          >
             {/* Primary CTA */}
             <a
               href="#catalog-showcase"
@@ -100,7 +120,7 @@ export const HeroSection: React.FC = () => {
             >
               <span>Nhận báo giá B2B</span>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -113,8 +133,12 @@ export const HeroSection: React.FC = () => {
             {TRUST_PILLARS.map((pillar, idx) => {
               const Icon = pillar.icon;
               return (
-                <div
+                <motion.div
                   key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1, ease: 'easeOut' }}
                   className="flex items-start gap-3.5 lg:px-6 first:lg:pl-0 last:lg:pr-0"
                 >
                   <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
@@ -128,7 +152,7 @@ export const HeroSection: React.FC = () => {
                       {pillar.subtitle}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

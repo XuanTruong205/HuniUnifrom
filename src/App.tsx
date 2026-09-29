@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { Header } from './components/layout/Header';
 import { HeroSection } from './components/sections/HeroSection';
 import { PartnerMarqueeStrip } from './components/common/PartnerMarqueeStrip';
@@ -11,8 +12,21 @@ import { CompleteFooter } from './components/layout/CompleteFooter';
 import { FloatingContactBar } from './components/common/FloatingContactBar';
 
 export const App: React.FC = () => {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+
   return (
     <div className="min-h-screen bg-[#FAF6F0] text-[#1E1C19] font-sans antialiased selection:bg-[#EAE0D3] selection:text-[#1E1C19]">
+      {/* 0. Top Luxury Scroll Progress Indicator */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#C29363] via-[#D4A373] to-[#E5C198] origin-left z-[9999] pointer-events-none"
+        style={{ scaleX }}
+      />
+
       {/* 1. Header (Sticky, 76px, Navy/Blur, CTA Nhận báo giá) */}
       <Header />
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { CASE_STUDIES } from '../../data/huni-master-data';
 import { ImageSlot } from '../ImageSlot';
 import {
@@ -17,7 +18,13 @@ export const RealProjectShowcase: React.FC = () => {
     <section id="real-projects" className="py-20 sm:py-24 lg:py-28 bg-[#FAF6F0] relative overflow-hidden text-[#1E1C19]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto space-y-4"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE8DD] border border-[#DFD6C8] text-[12px] font-medium text-[#574F44]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7D6B56]" />
             <span>Hồ sơ năng lực & Dự án thực tế</span>
@@ -31,7 +38,7 @@ export const RealProjectShowcase: React.FC = () => {
           <p className="text-[14px] sm:text-[15px] leading-[1.65] text-[#6E6559] max-w-2xl mx-auto font-normal">
             HDC Uniform vinh hạnh đồng hành cùng các sự kiện thể thao lãnh đạo cấp quốc gia và các giải pháp đồng phục học sinh tiêu chuẩn cao.
           </p>
-        </div>
+        </motion.div>
 
         {/* Content list */}
         <div className="mt-12 sm:mt-14 lg:mt-16 space-y-12">
@@ -39,7 +46,13 @@ export const RealProjectShowcase: React.FC = () => {
           {/* DỰ ÁN 1: GIẢI GOLF DNT 30 NĂM (Trang 8 Catalogue)            */}
           {/* ============================================================= */}
           {golfProject && (
-            <div className="bg-[#FAF7F2] rounded-[28px] p-6 sm:p-9 lg:p-11 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] space-y-7 relative overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-[#FAF7F2] rounded-[28px] p-6 sm:p-9 lg:p-11 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] space-y-7 relative overflow-hidden"
+            >
               {/* Header info */}
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-[#ECE3D5]">
                 <div className="space-y-1.5">
@@ -162,14 +175,20 @@ export const RealProjectShowcase: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
 
           {/* ============================================================= */}
           {/* DỰ ÁN 2: ĐỒNG PHỤC HỌC SINH IHDC KIDS (Trang 9-12)          */}
           {/* ============================================================= */}
           {kidsProject && (
-            <div className="bg-[#FAF7F2] rounded-[28px] p-6 sm:p-9 lg:p-11 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] space-y-7 relative overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-[#FAF7F2] rounded-[28px] p-6 sm:p-9 lg:p-11 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] space-y-7 relative overflow-hidden"
+            >
               {/* Header info */}
               <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-[#ECE3D5]">
                 <div className="space-y-1.5">
@@ -283,7 +302,7 @@ export const RealProjectShowcase: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
         </div>
       </div>

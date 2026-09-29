@@ -41,7 +41,13 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
     <section id="eco-fabrics-seamless" className="py-20 sm:py-24 lg:py-28 bg-[#FAF6F0] relative overflow-hidden text-[#1E1C19]">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto space-y-4"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE8DD] border border-[#DFD6C8] text-[12px] font-medium text-[#574F44]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7D6B56]" />
             <span>Đột phá chất liệu xanh & Công nghệ</span>
@@ -55,10 +61,16 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
           <p className="text-[14px] sm:text-[15px] leading-[1.65] text-[#6E6559] max-w-2xl mx-auto font-normal">
             {SUSTAINABLE_FABRICS.subText}. Tiên phong ứng dụng nguồn sợi tự nhiên bản địa Việt Nam và kỹ thuật dán ép nhiệt phẳng phiu không ma sát.
           </p>
-        </div>
+        </motion.div>
 
         {/* 3 Nhóm Chính: Luxury Pill Tab Switcher */}
-        <div className="mt-10 sm:mt-12 lg:mt-14 flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mt-10 sm:mt-12 lg:mt-14 flex items-center justify-center"
+        >
           <div className="inline-flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#EFE8DD]/70 rounded-full border border-[#DFD6C8]">
             <button
               onClick={() => setActiveGroup('fabric')}
@@ -96,7 +108,7 @@ export const EcoFabricAndSeamlessSection: React.FC = () => {
               <span>3. Họa tiết bản sắc văn hóa</span>
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Nội dung theo từng nhóm */}
         <div className="mt-10 sm:mt-12">

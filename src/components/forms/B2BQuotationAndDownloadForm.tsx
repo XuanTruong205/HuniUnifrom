@@ -49,7 +49,13 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-10 sm:mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-2xl mx-auto space-y-3 mb-10 sm:mb-12"
+        >
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE8DD] border border-[#DFD6C8] text-[12px] font-medium text-[#574F44]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7D6B56]" />
             <span>Liên hệ tư vấn & Báo giá nhanh B2B</span>
@@ -63,7 +69,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
           <p className="text-[13.5px] sm:text-[14.5px] leading-relaxed text-[#6E6559] font-normal">
             Để lại thông tin nhận bảng giá và tập mẫu vải tận nơi trong 15 phút, hoặc liên hệ trực tiếp Hotline/Zalo.
           </p>
-        </div>
+        </motion.div>
 
         {/* Main 2-Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
@@ -71,7 +77,13 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
           {/* ========================================================= */}
           {/* LEFT: FORM LIÊN HỆ SIÊU TỐC                                */}
           {/* ========================================================= */}
-          <div className="lg:col-span-7 bg-[#FAF7F2] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] flex flex-col justify-between">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 bg-[#FAF7F2] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] flex flex-col justify-between"
+          >
             {isSubmitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
@@ -190,12 +202,18 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                 </div>
               </form>
             )}
-          </div>
+          </motion.div>
 
           {/* ========================================================= */}
           {/* RIGHT: LIÊN HỆ TRỰC TIẾP 24/7                             */}
           {/* ========================================================= */}
-          <div className="lg:col-span-5 bg-[#1F1B17] text-[#FAF6F0] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 border border-[#352E26] shadow-[0_8px_32px_rgba(26,23,20,0.12)] flex flex-col justify-between space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 bg-[#1F1B17] text-[#FAF6F0] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 border border-[#352E26] shadow-[0_8px_32px_rgba(26,23,20,0.12)] flex flex-col justify-between space-y-6"
+          >
             <div className="space-y-5">
               
               {/* Badge */}
@@ -278,7 +296,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

@@ -106,7 +106,13 @@ export const FounderAndCommitmentSection: React.FC = () => {
         {/* ========================================================= */}
         {/* 2. SECTION HEADER (CENTERED, EDITORIAL SERIF)             */}
         {/* ========================================================= */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-3xl mx-auto space-y-4"
+        >
           {/* Pill Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFE8DD] border border-[#DFD6C8] text-[12px] font-medium text-[#574F44]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#7D6B56]" />
@@ -123,7 +129,7 @@ export const FounderAndCommitmentSection: React.FC = () => {
           <p className="text-[14px] sm:text-[15px] leading-[1.65] text-[#6E6559] max-w-2xl mx-auto font-normal">
             HDC Uniform cam kết kiến tạo giải pháp đồng phục chỉnh chu, tôn vinh hình ảnh và bản sắc văn hóa riêng biệt của từng đối tác doanh nghiệp.
           </p>
-        </div>
+        </motion.div>
 
         {/* ========================================================= */}
         {/* 3. MAIN SECTION GRID (LEFT: PHOTO, RIGHT: CONTENT)        */}
@@ -133,7 +139,13 @@ export const FounderAndCommitmentSection: React.FC = () => {
           {/* ------------------------------------------------------- */}
           {/* CỘT TRÁI: TABS & FOUNDER PORTRAIT CARD                  */}
           {/* ------------------------------------------------------- */}
-          <div className="lg:col-span-5 flex flex-col space-y-4">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-5 flex flex-col space-y-4"
+          >
             {/* Top Switcher Tabs */}
             <div className="flex items-center gap-2">
               <button
@@ -226,12 +238,18 @@ export const FounderAndCommitmentSection: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* ------------------------------------------------------- */}
           {/* CỘT PHẢI: QUOTE & 4 CORE COMMITMENT CARDS               */}
           {/* ------------------------------------------------------- */}
-          <div className="lg:col-span-7 space-y-6 sm:space-y-7">
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-7 space-y-6 sm:space-y-7"
+          >
             
             {/* Editorial Quote Header */}
             <div className="space-y-3.5">
@@ -262,11 +280,15 @@ export const FounderAndCommitmentSection: React.FC = () => {
 
               {/* 2x2 Commitment Cards Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                {CORE_COMMITMENTS.map((item) => {
+                {CORE_COMMITMENTS.map((item, idx) => {
                   const Icon = item.icon;
                   return (
-                    <div
+                    <motion.div
                       key={item.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: idx * 0.08, ease: 'easeOut' }}
                       className="p-4 sm:p-4.5 rounded-[18px] bg-[#FAF7F2] hover:bg-[#F5EFE6] border border-[#ECE3D5] hover:border-[#DECBB7] shadow-[0_4px_16px_rgba(40,32,24,0.03)] hover:shadow-md transition-all duration-300 flex items-start gap-3.5 group"
                     >
                       {/* Icon with warm circular backdrop */}
@@ -283,7 +305,7 @@ export const FounderAndCommitmentSection: React.FC = () => {
                           {item.desc}
                         </p>
                       </div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -306,7 +328,7 @@ export const FounderAndCommitmentSection: React.FC = () => {
               </div>
             </div>
 
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
