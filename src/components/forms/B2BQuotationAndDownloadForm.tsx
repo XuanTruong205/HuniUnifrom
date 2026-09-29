@@ -9,30 +9,13 @@ import {
   Sparkles,
   ShieldCheck,
   ArrowRight,
-  MessageSquare,
   User,
   Building2,
+  FileText,
 } from 'lucide-react';
-
-const QUICK_PRODUCTS = [
-  'Sơ mi Seamless',
-  'Polo Anti-UV',
-  'Đồng phục học sinh',
-  'Vest doanh nghiệp',
-  'Thiết kế theo yêu cầu',
-];
-
-const QUICK_QUANTITIES = [
-  'Dưới 50 bộ',
-  '50 - 200 bộ',
-  '200 - 500 bộ',
-  'Trên 500 bộ',
-];
 
 export const B2BQuotationAndDownloadForm: React.FC = () => {
   // Form State
-  const [selectedProduct, setSelectedProduct] = useState<string>(QUICK_PRODUCTS[0]);
-  const [selectedQuantity, setSelectedQuantity] = useState<string>(QUICK_QUANTITIES[1]);
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
   const [noteOrCompany, setNoteOrCompany] = useState('');
@@ -63,7 +46,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
 
   return (
     <section id="quotation-download" className="py-16 sm:py-20 lg:py-24 bg-[#F5EFE6] relative overflow-hidden text-[#1E1C19]">
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-10 sm:mb-12">
@@ -78,7 +61,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
           </h2>
 
           <p className="text-[13.5px] sm:text-[14.5px] leading-relaxed text-[#6E6559] font-normal">
-            Điền nhanh thông tin trong 15 giây hoặc gọi trực tiếp Hotline để chuyên viên HDC gửi mẫu vải tận nơi ngay trong ngày.
+            Để lại thông tin nhận bảng giá và tập mẫu vải tận nơi trong 15 phút, hoặc liên hệ trực tiếp Hotline/Zalo.
           </p>
         </div>
 
@@ -86,7 +69,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-8 items-stretch">
           
           {/* ========================================================= */}
-          {/* LEFT: FORM TINH GỌN (CHỈ 15 GIÂY)                        */}
+          {/* LEFT: FORM LIÊN HỆ SIÊU TỐC                                */}
           {/* ========================================================= */}
           <div className="lg:col-span-7 bg-[#FAF7F2] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 border border-[#ECE3D5] shadow-[0_6px_24px_rgba(40,32,24,0.03)] flex flex-col justify-between">
             {isSubmitted ? (
@@ -115,124 +98,75 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                
-                {/* 1. Chọn nhanh dòng sản phẩm quan tâm */}
-                <div className="space-y-2.5">
-                  <label className="text-[13px] font-semibold text-[#1E1C19] flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#8F6E43]" />
-                    <span>Dòng sản phẩm quan tâm:</span>
-                  </label>
-                  <div className="flex flex-wrap gap-2">
-                    {QUICK_PRODUCTS.map((prod) => {
-                      const isSelected = selectedProduct === prod;
-                      return (
-                        <button
-                          key={prod}
-                          type="button"
-                          onClick={() => setSelectedProduct(prod)}
-                          className={`px-3.5 py-2 rounded-full text-[12.5px] font-medium transition-all duration-150 cursor-pointer ${
-                            isSelected
-                              ? 'bg-[#2B2620] text-white shadow-xs'
-                              : 'bg-[#F5EFE6] hover:bg-[#EFE8DD] text-[#5C5346] border border-[#ECE3D5]'
-                          }`}
-                        >
-                          {prod}
-                        </button>
-                      );
-                    })}
-                  </div>
+              <form onSubmit={handleSubmit} className="space-y-5 my-auto">
+                <div className="space-y-1 pb-1">
+                  <h3 className="font-serif text-[20px] sm:text-[22px] font-medium text-[#1E1C19]">
+                    Để lại thông tin tư vấn
+                  </h3>
+                  <p className="text-[12.5px] text-[#7A7164] font-normal">
+                    Chuyên viên sẽ liên hệ và mang mẫu vải thực tế đến tận nơi cho doanh nghiệp.
+                  </p>
                 </div>
 
-                {/* 2. Chọn nhanh số lượng */}
-                <div className="space-y-2.5">
-                  <label className="text-[13px] font-semibold text-[#1E1C19] flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#8F6E43]" />
-                    <span>Số lượng đặt may dự kiến:</span>
-                  </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {QUICK_QUANTITIES.map((qty) => {
-                      const isSelected = selectedQuantity === qty;
-                      return (
-                        <button
-                          key={qty}
-                          type="button"
-                          onClick={() => setSelectedQuantity(qty)}
-                          className={`p-2 rounded-xl text-[12px] font-medium text-center transition-all duration-150 cursor-pointer ${
-                            isSelected
-                              ? 'bg-[#2B2620] text-white shadow-xs'
-                              : 'bg-[#F5EFE6] hover:bg-[#EFE8DD] text-[#5C5346] border border-[#ECE3D5]'
-                          }`}
-                        >
-                          {qty}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* 3. Thông tin liên hệ nhanh (Họ tên + Số điện thoại) */}
-                <div className="pt-2 border-t border-[#ECE3D5] space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                    {/* Họ và tên */}
-                    <div className="space-y-1">
-                      <label className="text-[12.5px] font-medium text-[#1E1C19]">
-                        Họ và tên *
-                      </label>
-                      <div className="relative">
-                        <User className="w-4 h-4 text-[#8C8070] absolute left-3.5 top-3.5" />
-                        <input
-                          type="text"
-                          required
-                          value={fullName}
-                          onChange={(e) => setFullName(e.target.value)}
-                          placeholder="Anh / Chị..."
-                          className="w-full h-[46px] pl-10 pr-3 text-[13.5px] bg-[#FAF7F2] border border-[#DFD6C8] rounded-xl focus:outline-none focus:border-[#2B2620] focus:ring-1 focus:ring-[#2B2620] text-[#1E1C19] placeholder:text-[#A09586]"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Số điện thoại / Zalo */}
-                    <div className="space-y-1">
-                      <label className="text-[12.5px] font-medium text-[#1E1C19]">
-                        Số điện thoại / Zalo nhận báo giá *
-                      </label>
-                      <div className="relative">
-                        <PhoneCall className="w-4 h-4 text-[#8C8070] absolute left-3.5 top-3.5" />
-                        <input
-                          type="tel"
-                          required
-                          value={phone}
-                          onChange={handlePhoneChange}
-                          placeholder="0984 95 95 86"
-                          className={`w-full h-[46px] pl-10 pr-3 text-[13.5px] bg-[#FAF7F2] border rounded-xl focus:outline-none text-[#1E1C19] placeholder:text-[#A09586] ${
-                            phoneError
-                              ? 'border-red-400 focus:ring-1 focus:ring-red-400'
-                              : 'border-[#DFD6C8] focus:border-[#2B2620] focus:ring-1 focus:ring-[#2B2620]'
-                          }`}
-                        />
-                      </div>
-                      {phoneError && (
-                        <p className="text-[11px] text-red-500 mt-1">{phoneError}</p>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Tên đơn vị / Ghi chú nhanh (Tùy chọn) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  {/* Họ và tên */}
                   <div className="space-y-1">
                     <label className="text-[12.5px] font-medium text-[#1E1C19]">
-                      Tên doanh nghiệp hoặc ghi chú thêm (Tùy chọn)
+                      Họ và tên *
                     </label>
                     <div className="relative">
-                      <Building2 className="w-4 h-4 text-[#8C8070] absolute left-3.5 top-3.5" />
+                      <User className="w-4 h-4 text-[#8C8070] absolute left-3.5 top-3.5" />
                       <input
                         type="text"
-                        value={noteOrCompany}
-                        onChange={(e) => setNoteOrCompany(e.target.value)}
-                        placeholder="Ví dụ: Công ty ABC - Cần nhận mẫu vải tận nơi..."
-                        className="w-full h-[46px] pl-10 pr-3 text-[13.5px] bg-[#FAF7F2] border border-[#DFD6C8] rounded-xl focus:outline-none focus:border-[#2B2620] focus:ring-1 focus:ring-[#2B2620] text-[#1E1C19] placeholder:text-[#A09586]"
+                        required
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        placeholder="Anh / Chị..."
+                        className="w-full h-[48px] pl-10 pr-3.5 text-[13.5px] bg-[#FAF7F2] border border-[#DFD6C8] rounded-xl focus:outline-none focus:border-[#2B2620] focus:ring-1 focus:ring-[#2B2620] text-[#1E1C19] placeholder:text-[#A09586]"
                       />
                     </div>
+                  </div>
+
+                  {/* Số điện thoại / Zalo */}
+                  <div className="space-y-1">
+                    <label className="text-[12.5px] font-medium text-[#1E1C19]">
+                      Số điện thoại / Zalo *
+                    </label>
+                    <div className="relative">
+                      <PhoneCall className="w-4 h-4 text-[#8C8070] absolute left-3.5 top-3.5" />
+                      <input
+                        type="tel"
+                        required
+                        value={phone}
+                        onChange={handlePhoneChange}
+                        placeholder="0984 95 95 86"
+                        className={`w-full h-[48px] pl-10 pr-3.5 text-[13.5px] bg-[#FAF7F2] border rounded-xl focus:outline-none text-[#1E1C19] placeholder:text-[#A09586] ${
+                          phoneError
+                            ? 'border-red-400 focus:ring-1 focus:ring-red-400'
+                            : 'border-[#DFD6C8] focus:border-[#2B2620] focus:ring-1 focus:ring-[#2B2620]'
+                        }`}
+                      />
+                    </div>
+                    {phoneError && (
+                      <p className="text-[11px] text-red-500 mt-1">{phoneError}</p>
+                    )}
+                  </div>
+                </div>
+
+                {/* Yêu cầu / Ghi chú nhanh */}
+                <div className="space-y-1">
+                  <label className="text-[12.5px] font-medium text-[#1E1C19]">
+                    Nhu cầu may đo hoặc tên doanh nghiệp (Tùy chọn)
+                  </label>
+                  <div className="relative">
+                    <FileText className="w-4 h-4 text-[#8C8070] absolute left-3.5 top-3.5" />
+                    <input
+                      type="text"
+                      value={noteOrCompany}
+                      onChange={(e) => setNoteOrCompany(e.target.value)}
+                      placeholder="Ví dụ: Công ty ABC - Cần tư vấn áo polo đồng phục 100 người..."
+                      className="w-full h-[48px] pl-10 pr-3.5 text-[13.5px] bg-[#FAF7F2] border border-[#DFD6C8] rounded-xl focus:outline-none focus:border-[#2B2620] focus:ring-1 focus:ring-[#2B2620] text-[#1E1C19] placeholder:text-[#A09586]"
+                    />
                   </div>
                 </div>
 
@@ -259,7 +193,7 @@ export const B2BQuotationAndDownloadForm: React.FC = () => {
           </div>
 
           {/* ========================================================= */}
-          {/* RIGHT: LIÊN HỆ TRỰC TIẾP 24/7 (KHÔNG CẦN CHỜ ĐỢI)       */}
+          {/* RIGHT: LIÊN HỆ TRỰC TIẾP 24/7                             */}
           {/* ========================================================= */}
           <div className="lg:col-span-5 bg-[#1F1B17] text-[#FAF6F0] rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 lg:p-9 border border-[#352E26] shadow-[0_8px_32px_rgba(26,23,20,0.12)] flex flex-col justify-between space-y-6">
             <div className="space-y-5">
