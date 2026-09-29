@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
 
   /* HDC Uniform Corporate Fashion Theme */
   --color-brand-navy: #08182F;
@@ -35,6 +36,10 @@ body {
 
 .font-sans {
   font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
 
 /* Subtle Corporate Shadows */

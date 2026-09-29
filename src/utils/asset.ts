@@ -2,7 +2,7 @@
  * Resolve public asset paths taking into account Vite's base path
  * (e.g. for GitHub Pages subpath deployment)
  */
-export function resolveAsset(path?: string): string {
+export function resolveAsset(path?: string | null): string {
   if (!path) return '';
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) {
     return path;
