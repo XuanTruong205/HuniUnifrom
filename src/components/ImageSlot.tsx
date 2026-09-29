@@ -36,13 +36,13 @@ export const ImageSlot: React.FC<ImageSlotProps> = ({
   // If real image source is available and no loading error
   if (slot.src && !hasError) {
     return (
-      <div className={`relative w-full overflow-hidden rounded-2xl bg-slate-100 ${aspectStyles} ${className}`}>
+      <div className={`relative w-full h-full overflow-hidden rounded-2xl bg-transparent ${aspectStyles} ${className}`}>
         <img
           src={resolveAsset(slot.src)}
           alt={slot.alt}
           loading="lazy"
           onError={() => setHasError(true)}
-          className={`w-full h-full ${fit === 'contain' ? 'object-contain p-2' : 'object-cover'} ${objectPosition} transition-transform duration-500 hover:scale-105`}
+          className={`w-full h-full ${fit === 'contain' ? 'object-contain' : 'object-cover'} ${objectPosition} transition-transform duration-500 hover:scale-105`}
         />
       </div>
     );

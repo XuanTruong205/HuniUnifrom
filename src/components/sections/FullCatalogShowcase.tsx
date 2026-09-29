@@ -153,7 +153,7 @@ export const FullCatalogShowcase: React.FC = () => {
                         <div className="relative aspect-[4/5] w-full rounded-xl overflow-hidden bg-white border border-[#ECE4D8] flex items-center justify-center">
                           <ImageSlot
                             slot={item.photoSlot}
-                            aspect="portrait"
+                            aspect="auto"
                             fit="contain"
                             objectPosition="object-center"
                             className="w-full h-full object-contain p-2 rounded-xl transition-transform duration-300 group-hover:scale-[1.04]"

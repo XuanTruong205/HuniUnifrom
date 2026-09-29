@@ -396,7 +396,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Mẫu sơ mi ngắn tay trẻ trung, thoáng mát, chất vải co giãn nhẹ nhàng.',
         photoSlot: {
           id: 'slot-sm-ngan-tay',
-          src: '/images/catalog/crop_sm_ngan_tay.png',
+          src: '/images/catalog/norm_sm_ngan_tay.png',
           alt: 'Sơ mi ngắn tay HDC Fashion',
           description: 'Mẫu sơ mi ngắn tay chuẩn form dáng IHDC',
           status: 'verified',
@@ -411,7 +411,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Sơ mi dài tay phom chuẩn cổ đức, bề mặt vải mềm mượt không cần là ủi.',
         photoSlot: {
           id: 'slot-sm-dai-tay',
-          src: '/images/catalog/crop_sm_dai_tay.png',
+          src: '/images/catalog/norm_sm_dai_tay.png',
           alt: 'Sơ mi dài tay HDC Fashion',
           description: 'Mẫu sơ mi nam dài tay thanh lịch tại trang bìa catalogue',
           status: 'verified',
@@ -426,7 +426,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Công nghệ liền mạch tại cổ áo, nẹp áo và vạt áo, trọng lượng siêu nhẹ.',
         photoSlot: {
           id: 'slot-sm-khong-duong-may',
-          src: '/images/catalog/crop_sm_set_seamless.png',
+          src: '/images/catalog/norm_sm_set_seamless.png',
           alt: 'Sơ mi không đường may Seamless',
           description: 'Mẫu sơ mi công nghệ không đường may cao cấp siêu nhẹ',
           status: 'verified',
@@ -441,7 +441,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Sắc trắng thanh lịch, giữ màu cực tốt, tạo phong thái trang trọng.',
         photoSlot: {
           id: 'slot-sm-trang',
-          src: '/images/catalog/crop_sm_trang.png',
+          src: '/images/catalog/norm_sm_trang.png',
           alt: 'Sơ mi trắng HDC Fashion',
           description: 'Mẫu sơ mi trắng cơ bản chuẩn doanh nghiệp',
           status: 'verified',
@@ -456,7 +456,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Đưa các giá trị văn hóa vào thiết kế thời trang, tôn vinh nét đẹp Việt Nam.',
         photoSlot: {
           id: 'slot-sm-hoa-tiet-van-hoa',
-          src: '/images/catalog/page05_obj70_360x360.png',
+          src: '/images/catalog/norm_sm_hoa_tiet.png',
           alt: 'Sơ mi họa tiết văn hóa HDC Fashion',
           description: 'Mẫu sơ mi in dệt họa tiết văn hóa độc đáo',
           status: 'verified',
@@ -471,7 +471,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Form dáng vest đứng chuẩn mực, tôn vinh vị thế và hình ảnh chuyên nghiệp.',
         photoSlot: {
           id: 'slot-vest-doanh-nhan',
-          src: '/images/catalog/page05_obj78_750x750.png',
+          src: '/images/catalog/norm_vest_doanh_nhan.png',
           alt: 'Vest đồng phục HDC Fashion',
           description: 'Bộ vest lịch lãm cắt may tinh xảo',
           status: 'verified',
@@ -513,7 +513,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Áo polo gam màu đỏ đô bo cổ viền sọc tương phản tinh tế.',
         photoSlot: {
           id: 'slot-polo-do-do',
-          src: '/images/catalog/page06_obj90_576x768.png',
+          src: '/images/catalog/norm_polo_do_do.png',
           alt: 'Áo Polo Anti-UV Đỏ đô cổ viền',
           description: 'Áo Polo Anti-UV phối cổ viền màu đỏ đô',
           status: 'verified',
@@ -528,7 +528,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Tone màu xanh navy trang nhã, sạch sẽ và dễ phối đồ.',
         photoSlot: {
           id: 'slot-polo-navy',
-          src: '/images/catalog/page06_obj89_384x512.png',
+          src: '/images/catalog/norm_polo_navy.png',
           alt: 'Áo Polo Anti-UV Xanh navy',
           description: 'Áo Polo Anti-UV màu xanh navy lịch lãm',
           status: 'verified',
@@ -543,7 +543,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Sắc trắng thanh lịch kết hợp 3 sọc thể thao tại bo cổ áo.',
         photoSlot: {
           id: 'slot-polo-trang-3-soc',
-          src: '/images/catalog/page06_obj86_576x768.png',
+          src: '/images/catalog/norm_polo_trang_3_soc.png',
           alt: 'Áo Polo Anti-UV Trắng 3 sọc cổ',
           description: 'Áo Polo Anti-UV màu trắng điểm 3 sọc cổ',
           status: 'verified',
@@ -558,7 +558,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Màu xanh biển tràn đầy năng lượng tươi mới cho các hoạt động.',
         photoSlot: {
           id: 'slot-polo-xanh-bien',
-          src: '/images/catalog/page06_obj87_482x512.png',
+          src: '/images/catalog/norm_polo_xanh_bien.png',
           alt: 'Áo Polo Anti-UV Xanh biển',
           description: 'Áo Polo Anti-UV sắc xanh biển tươi mát',
           status: 'verified',
@@ -573,7 +573,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Màu đen huyền bí, chất vải bền màu, chống tia UV hiệu quả.',
         photoSlot: {
           id: 'slot-polo-den',
-          src: '/images/catalog/page06_obj88_384x512.png',
+          src: '/images/catalog/norm_polo_den.png',
           alt: 'Áo Polo Anti-UV Đen',
           description: 'Áo Polo Anti-UV màu đen sang trọng',
           status: 'verified',
@@ -598,7 +598,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Gile vest màu xanh đậm đính cúc kim loại vàng sang trọng cùng sơ mi trắng.',
         photoSlot: {
           id: 'slot-set-sm-gile-cuc-vang',
-          src: '/images/catalog/page12_obj134_452x452.png',
+          src: '/images/catalog/crop_kids_gile_cuc_vang.png',
           alt: 'Set Sơ mi gile vest cúc vàng IHDC Kids',
           description: 'Set sơ mi gile vest học sinh cúc vàng nổi bật',
           status: 'verified',
@@ -613,7 +613,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Áo gile dệt sợi ghi xám phối cà vạt tím pastel trang nhã cho học sinh.',
         photoSlot: {
           id: 'slot-set-gile-xam-ca-vat-tim',
-          src: '/images/catalog/page12_obj135_452x452.png',
+          src: '/images/catalog/crop_kids_gile_xam.png',
           alt: 'Set Gile ghi xám cà vạt tím IHDC Kids',
           description: 'Set đồng phục gile ghi xám phối cà vạt tím',
           status: 'verified',
@@ -628,7 +628,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Thiết kế váy yếm học sinh gam màu xanh rêu thanh nhã kết hợp áo trắng.',
         photoSlot: {
           id: 'slot-set-yem-xanh-reu',
-          src: '/images/catalog/page12_obj136_1152x648.png',
+          src: '/images/catalog/crop_kids_yem_xanh_reu.png',
           alt: 'Set váy yếm xanh rêu IHDC Kids',
           description: 'Set yếm học sinh gam màu xanh rêu thanh nhã',
           status: 'verified',
@@ -643,7 +643,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Áo polo thoáng mát phối quần hoặc chân váy kaki be xếp ly.',
         photoSlot: {
           id: 'slot-set-polo-kaki-be',
-          src: '/images/catalog/page00_obj132_395x593.png',
+          src: '/images/catalog/crop_kids_polo_kaki_be.png',
           alt: 'Set Polo Kaki be IHDC Kids',
           description: 'Đồng phục học sinh Set Polo phối Quần/Váy kaki be',
           status: 'verified',
@@ -663,7 +663,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
           description: 'Áo polo trắng dáng cổ bẻ, form suông thoải mái cho bé sinh hoạt.',
           photoSlot: {
             id: 'slot-polo-kids-trang',
-            src: '/images/catalog/page00_obj124_450x600.png',
+            src: '/images/catalog/crop_polo_kids_trang.png',
             alt: 'Polo Trẻ Em Màu Trắng',
             description: 'Áo Polo học sinh màu trắng Best Seller',
             status: 'verified',
@@ -677,7 +677,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
           description: 'Form dáng vừa vặn, màu sắc sạch sẽ, chống bám bẩn khi vận động.',
           photoSlot: {
             id: 'slot-polo-kids-navy',
-            src: '/images/catalog/page11_obj128_683x1024.png',
+            src: '/images/catalog/crop_polo_kids_navy.png',
             alt: 'Polo Trẻ Em Màu Xanh Navy',
             description: 'Áo Polo học sinh màu xanh navy Best Seller',
             status: 'verified',
@@ -691,7 +691,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
           description: 'Sắc đỏ tràn đầy năng lượng và tự tin trong các hoạt động học đường.',
           photoSlot: {
             id: 'slot-polo-kids-do',
-            src: '/images/catalog/page11_obj129_342x455.png',
+            src: '/images/catalog/crop_polo_kids_do.png',
             alt: 'Polo Trẻ Em Màu Đỏ',
             description: 'Áo Polo học sinh màu đỏ Best Seller',
             status: 'verified',
@@ -705,7 +705,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
           description: 'Sắc vàng tươi sáng mang đến vẻ đẹp thời trang và đáng yêu cho bé.',
           photoSlot: {
             id: 'slot-polo-kids-vang',
-            src: '/images/catalog/page11_obj127_360x480.png',
+            src: '/images/catalog/crop_polo_kids_vang.png',
             alt: 'Polo Trẻ Em Màu Vàng',
             description: 'Áo Polo học sinh màu vàng Best Seller',
             status: 'verified',
@@ -731,7 +731,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Cavat dệt hoa văn tỉ mỉ, đồng bộ sang trọng cùng áo sơ mi.',
         photoSlot: {
           id: 'slot-ca-vat',
-          src: '/images/catalog/page04_obj63_256x224.png',
+          src: '/images/catalog/norm_ca_vat.png',
           alt: 'Cavat đồng phục HDC Fashion',
           description: 'Phụ kiện cavat họa tiết tinh tế',
           status: 'verified',
@@ -746,7 +746,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Ví da cao cấp dập chìm nhận diện thương hiệu tỉ mỉ từng chi tiết.',
         photoSlot: {
           id: 'slot-vi-da',
-          src: '/images/catalog/page04_obj64_514x386.png',
+          src: '/images/catalog/norm_vi_da.png',
           alt: 'Ví da doanh nhân HDC Fashion',
           description: 'Phụ kiện ví da cao cấp đồng bộ trang phục',
           status: 'verified',
@@ -761,7 +761,7 @@ export const PRODUCTS_CATALOG: readonly ProductCatalogGroup[] = [
         description: 'Thắt lưng da cao cấp phối khóa kim loại mạ vàng sang trọng.',
         photoSlot: {
           id: 'slot-that-lung-da',
-          src: '/images/catalog/page04_obj62_256x228.png',
+          src: '/images/catalog/norm_that_lung_da.png',
           alt: 'Thắt lưng da HDC Fashion',
           description: 'Thắt lưng họa tiết cao cấp',
           status: 'verified',
